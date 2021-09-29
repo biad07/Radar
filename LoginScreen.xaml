@@ -6,22 +6,30 @@
         xmlns:local="clr-namespace:Radar"
         xmlns:Internal="clr-namespace:Microsoft.EntityFrameworkCore.Sqlite.Diagnostics.Internal;assembly=Microsoft.EntityFrameworkCore.Sqlite" x:Class="Radar.LoginScreen"
         mc:Ignorable="d"
-        Title="Radar" Height="768" Width="1024"
-        Background="White">
-    <Grid RenderTransformOrigin="0,0">
+        Title="Radar" Height="611" Width="720">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF2F49AE"/>
+            <GradientStop Color="White" Offset="1"/>
+            <GradientStop Color="#FF92D4B5" Offset="0.476"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid RenderTransformOrigin="0,0" Margin="28,0,2,27">
         <Grid.RowDefinitions>
-            <RowDefinition Height="231*"/>
-            <RowDefinition Height="145*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="91*"/>
+            <RowDefinition Height="431*"/>
         </Grid.RowDefinitions>
-        <TabControl HorizontalAlignment="Left" Height="336" Margin="64,298,0,0" VerticalAlignment="Top" Width="520" Background="White" Grid.RowSpan="2">
-            <TabItem Header="Signup" Margin="0,-2,-46,-1" HorizontalAlignment="Right" Width="53">
+        <TabControl HorizontalAlignment="Left" Height="336" Margin="64,1,0,0" VerticalAlignment="Top" Width="520" Background="Transparent" Grid.Row="3" BorderBrush="Transparent">
+            <TabItem Header="Signup" Margin="0,0,-74,0" HorizontalAlignment="Right" Width="77" Height="20" BorderBrush="Transparent">
                 <TabItem.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="#7be9f6" Offset="0.0"/>
-                        <GradientStop Color="#f083da" Offset="1"/>
+                        <GradientStop Color="#FF8883F0" Offset="1"/>
                     </LinearGradientBrush>
                 </TabItem.Background>
-                <Grid Height="370" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="534">
+                <Grid Height="349" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="534" Background="Transparent">
                     <Grid.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -30,20 +38,15 @@
                             <TranslateTransform/>
                         </TransformGroup>
                     </Grid.RenderTransform>
-                    <Grid.Background>
-                        <LinearGradientBrush>
-                            <GradientStop Color="#7be9f6" Offset="0.0"/>
-                            <GradientStop Color="#f083da" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Grid.Background>
 
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0*"/>
-                        <ColumnDefinition Width="15*"/>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="7*"/>
                         <ColumnDefinition Width="22*"/>
                         <ColumnDefinition Width="230*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox x:Name="Username" Grid.Column="2" HorizontalAlignment="Left" Height="39" Margin="0,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" VerticalContentAlignment="Center" Background="#ede1f0">
+                    <TextBox x:Name="Username" Grid.Column="3" HorizontalAlignment="Left" Height="39" Margin="0,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" VerticalContentAlignment="Center" Background="#ede1f0" HorizontalContentAlignment="Left" HorizontalScrollBarVisibility="Auto">
                         <TextBox.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform ScaleX="1"/>
@@ -53,7 +56,7 @@
                             </TransformGroup>
                         </TextBox.RenderTransform>
                     </TextBox>
-                    <TextBox x:Name="Name" Grid.Column="2" Background="#ede1f0" HorizontalAlignment="Left" Height="39" Margin="0,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" VerticalContentAlignment="Center">
+                    <TextBox x:Name="Name" Grid.Column="3" Background="#ede1f0" HorizontalAlignment="Left" Height="39" Margin="0,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" VerticalContentAlignment="Center">
                         <TextBox.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform ScaleX="1"/>
@@ -63,7 +66,7 @@
                             </TransformGroup>
                         </TextBox.RenderTransform>
                     </TextBox>
-                    <TextBox x:Name="Email" Grid.Column="2" Background="#ede1f0" HorizontalAlignment="Left" Height="39" Margin="0,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" VerticalContentAlignment="Center">
+                    <TextBox x:Name="Email" Grid.Column="3" Background="#ede1f0" HorizontalAlignment="Left" Height="39" Margin="0,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" VerticalContentAlignment="Center">
                         <TextBox.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform ScaleX="1"/>
@@ -73,12 +76,12 @@
                             </TransformGroup>
                         </TextBox.RenderTransform>
                     </TextBox>
-                    <PasswordBox x:Name="Signup" Grid.Column="2" Grid.ColumnSpan="2" Background="#ede1f0" HorizontalAlignment="Left" Height="39" Margin="0,240,0,0" VerticalAlignment="Top" Width="247" Tag="Password" Focusable="True" />
-                    <Label Grid.Column="2" Content="Username" HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2" Height="26"/>
-                    <Label Grid.Column="2" Content="Full name" HorizontalAlignment="Left" Margin="0,84,0,0" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2" Height="26"/>
-                    <Label Grid.Column="2" Content="E-mail" HorizontalAlignment="Left" Margin="0,149,0,0" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2" Height="26"/>
-                    <Label Grid.Column="2" Content="Password" HorizontalAlignment="Left" Margin="0,214,0,0" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2" Height="26"/>
-                    <Button x:Name="Sign_up" Grid.Column="3" Content="Sign Up" HorizontalAlignment="Left" Height="65" Margin="276,149,0,0" VerticalAlignment="Top" Width="124" Foreground="#FFDFD3D3" BorderBrush="#FF31E4C0">
+                    <PasswordBox x:Name="Signup" Grid.Column="3" Grid.ColumnSpan="2" Background="#ede1f0" HorizontalAlignment="Left" Height="39" Margin="0,240,0,0" VerticalAlignment="Top" Width="247" Tag="Password" Focusable="True" VerticalContentAlignment="Center" />
+                    <Label Grid.Column="3" Content="Username" HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2" Height="26"/>
+                    <Label Grid.Column="3" Content="Full name" HorizontalAlignment="Left" Margin="0,84,0,0" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2" Height="26"/>
+                    <Label Grid.Column="3" Content="E-mail" HorizontalAlignment="Left" Margin="0,149,0,0" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2" Height="26"/>
+                    <Label Grid.Column="3" Content="Password" HorizontalAlignment="Left" Margin="0,214,0,0" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2" Height="26"/>
+                    <Button x:Name="Sign_up" Grid.Column="4" Content="Sign Up" HorizontalAlignment="Left" Height="65" Margin="276,149,0,0" VerticalAlignment="Top" Width="124" Foreground="#FFDFD3D3" BorderBrush="Transparent">
                         <Button.Background>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                 <GradientStop Color="#FF366BD4" Offset="0.13"/>
@@ -91,20 +94,14 @@
                     </Button>
                 </Grid>
             </TabItem>
-            <TabItem Header="Login" Margin="-55,-2,0,2" HorizontalAlignment="Left" Width="49">
+            <TabItem Header="Login" Margin="-78,0,0,0" HorizontalAlignment="Left" Width="77" Height="20" BorderBrush="Transparent" Foreground="Black">
                 <TabItem.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="#7be9f6" Offset="0.0"/>
-                        <GradientStop Color="#f083da" Offset="1"/>
+                        <GradientStop Color="#FF8883F0" Offset="1"/>
                     </LinearGradientBrush>
                 </TabItem.Background>
-                <Grid HorizontalAlignment="Center" Width="522" Height="313">
-                    <Grid.Background>
-                        <LinearGradientBrush>
-                            <GradientStop Color="#7be9f6" Offset="0.0"/>
-                            <GradientStop Color="#f083da" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Grid.Background>
+                <Grid HorizontalAlignment="Center" Width="522" Height="313" Visibility="Visible">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="21*"/>
                         <ColumnDefinition Width="37*"/>
@@ -113,10 +110,10 @@
                         <ColumnDefinition Width="400*"/>
                     </Grid.ColumnDefinitions>
                     <TextBox HorizontalAlignment="Left" Height="28" Margin="27,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="223" Grid.Column="4" AutomationProperties.HelpText="Username"  TextAlignment="Left" VerticalContentAlignment="Center"  Background="#ede1f0"/>
-                    <PasswordBox HorizontalAlignment="Left" Height="28" Margin="27,204,0,0" VerticalAlignment="Top" Width="223" Grid.Column="4" Background="#ede1f0"/>
+                    <PasswordBox HorizontalAlignment="Left" Height="28" Margin="27,204,0,0" VerticalAlignment="Top" Width="223" Grid.Column="4" Background="#ede1f0" VerticalContentAlignment="Center"/>
                     <Label Content="Username" HorizontalAlignment="Left" Margin="16,172,0,0" VerticalAlignment="Top" Width="76" Height="26" Grid.Column="2" Grid.ColumnSpan="3"/>
                     <Label Content="Password" HorizontalAlignment="Left" Margin="16,203,0,0" VerticalAlignment="Top" Width="76" Grid.ColumnSpan="3" Height="26" Grid.Column="2"/>
-                    <Button Content="Login" HorizontalAlignment="Left" Height="41" Margin="260,235,0,0" VerticalAlignment="Top" Width="110" Foreground="#FFDFD3D3" BorderBrush="#FF31E4C0" Grid.Column="4">
+                    <Button Content="Login" HorizontalAlignment="Left" Height="41" Margin="260,235,0,0" VerticalAlignment="Top" Width="110" Foreground="#FFDFD3D3" BorderBrush="Transparent" Grid.Column="4">
                         <Button.Background>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                 <GradientStop Color="#FF366BD4" Offset="0.13"/>
@@ -124,10 +121,11 @@
                             </LinearGradientBrush>
                         </Button.Background>
                     </Button>
-                    <TextBox HorizontalAlignment="Left" Margin="16,238,0,0" TextWrapping="Wrap" Text="Forgot password?" VerticalAlignment="Top" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Column="2" Grid.ColumnSpan="3"/>
+                    <TextBox HorizontalAlignment="Left" Margin="16,238,0,0" TextWrapping="Wrap" Text="Forgot password?" VerticalAlignment="Top" Width="120" Background="Transparent" BorderBrush="Transparent" Grid.Column="2" Grid.ColumnSpan="3"/>
                     <Image x:Name="user" HorizontalAlignment="Left" Height="108" Margin="75,33,0,0" VerticalAlignment="Top" Width="116" Source="C:\Users\bia_d\source\repos\Radar\Resources\220px-User_icon_2.svg.png" Grid.Column="4"/>
                 </Grid>
             </TabItem>
         </TabControl>
+        <Label Content="RADAR APPLICATION" HorizontalAlignment="Left" Margin="202,22,0,0" Grid.Row="2" VerticalAlignment="Top" FontFamily="Arial Black" FontWeight="Bold" FontSize="20"/>
     </Grid>
 </Window>
